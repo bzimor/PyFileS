@@ -301,16 +301,7 @@ class MainWindow:
         self.dbList.bind('<Double-Button-1>', self.open_dbtree)
         self.driveList.bind('<Double-Button-1>', self.open_root)
         self.dirtree.bind("<Button-3>", self.conmenu)
-        master.protocol("WM_DELETE_WINDOW", self.app_quit)
-
-        self.s.configure('TFrame', background='green')
-        self.s.configure('TLabelframe', background='green')
-        self.s.configure('TButton', background='green')
-        self.s.configure('TNotebook', background='green')
-        self.s.configure('TLabel', background='green')
-        self.s.configure('Treeview', background='green')
-        print(self.s.layout('Treeview'))
-        
+        master.protocol("WM_DELETE_WINDOW", self.app_quit)      
         fio.check_extfile()
 
     def change_view(self):
